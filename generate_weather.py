@@ -28,7 +28,7 @@ def write_weather_to_file(weather: List[Tuple[str, float]], filepath: str) -> No
             file.write(f"{city};{temperature}\n")
 
 if __name__ == "__main__":
-    ROWS_TO_GENERATE = 1000000
+    ROWS_TO_GENERATE = 10000000
     cities = get_cities("data/worldcities.csv")
     weather = generate_weather_for_cities(cities, ROWS_TO_GENERATE)
     write_weather_to_file(weather, "data/my_weather_stations.csv")
