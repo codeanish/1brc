@@ -138,7 +138,7 @@ def process_file(
 if __name__ == '__main__':
 
     start = time.perf_counter()
-    chunks = get_file_chunks("data/my_weather_stations.csv", 10)
+    chunks = get_file_chunks("data/weather_stations.csv", 10)
     process_file(10, chunks)
     end = time.perf_counter()
     print(f"Completed in {end-start:0.4f} seconds")

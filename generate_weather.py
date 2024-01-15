@@ -33,9 +33,9 @@ def write_weather_to_file(cities: List[str], rows_to_generate: int, filepath: st
 
 
 if __name__ == "__main__":
-    ROWS_TO_GENERATE = 1000000000
+    ROWS_TO_GENERATE = 1000000
     cities = get_cities("data/worldcities.csv")
     start = time.perf_counter()
-    write_weather_to_file(cities, ROWS_TO_GENERATE, "data/my_weather_stations.csv")
+    write_weather_to_file(cities, ROWS_TO_GENERATE, "data/weather_stations.csv")
     end = time.perf_counter()
     print(f"Completed writing {ROWS_TO_GENERATE} write_weather_to_file in {end-start:0.4f} seconds")
